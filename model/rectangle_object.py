@@ -20,4 +20,47 @@ class RectangleObject(Object):
         self._x = value
         self.property_changed.emit("x", value)
 
-    # Similar properties for y, width, height, fill_color, stroke_color
+    @property
+    def y(self):
+        return self._y
+
+    @y.setter
+    def y(self, value):
+        self._y = value
+        self.property_changed.emit("y", value)
+
+    @property
+    def width(self):
+        return self._width
+
+    @width.setter
+    def width(self, value):
+        self._width = value
+        self.property_changed.emit("width", value)
+
+    @property
+    def height(self):
+        return self._height
+
+    @height.setter
+    def height(self, value):
+        self._height = value
+        self.property_changed.emit("height", value)
+
+    @property
+    def fill_color(self):
+        return self._fill_color
+
+    @fill_color.setter
+    def fill_color(self, value):
+        self._fill_color = value
+        self.property_changed.emit("fill_color", value)
+
+    @property
+    def stroke_color(self):
+        return self._stroke_color
+
+    @stroke_color.setter
+    def stroke_color(self, value):
+        self._stroke_color = value
+        self.property_changed.emit("stroke_color", value)
